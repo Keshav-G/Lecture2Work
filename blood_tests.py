@@ -18,6 +18,9 @@ def analyze_HDL_data(result):
 	else:
 		return "Low"
 
+def output_HDL_data(result)
+	print("Your HDL status is: " + result)
+
 def HDL_driver():
 	# Get Data
 	HDL_result = input_HDL_data()
@@ -29,3 +32,4 @@ def HDL_driver():
 	output_HDL_data(status)
 
 interface()
+HDL_driver()
