@@ -16,7 +16,7 @@ def input_HDL_data():
 def analyze_HDL_data(result):
 	if result >= 60:
 		return "Normal"
-	elif result 40 <= result < 60:
+	elif 40 <= result < 60:
 		return "Borderline low"
 	else:
 		return "Low"
