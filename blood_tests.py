@@ -1,7 +1,8 @@
 def interface():
 	while True:
-		print("/nBlood Test Analysis")
+		print("\nBlood Test Analysis")
 		print("Options")
+		print("1 - HDL Analysis")
 		print("9 - Quit")
 		choice = input("Enter an option: ")
 		if choice == "9":
