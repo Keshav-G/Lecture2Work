@@ -10,13 +10,13 @@ def interface():
 		if choice == "9":
 			return
 		elif choice == "1":
-			print("Running HDL Driver")
+			print("\nRunning HDL Driver")
 			HDL_driver()
 		elif choice == "2":
-			print("Running LDL Driver")
+			print("\nRunning LDL Driver")
 			LDL_driver()
 		elif choice == "3":
-			print("Running Total Cholesterol Driver")
+			print("\nRunning Total Cholesterol Driver")
 			Total_Cholesterol_Driver()
 		else:
 			print("Please enter 1, 2, 3, or 9")
@@ -32,7 +32,7 @@ def analyze_HDL_data(result):
 		return "Borderline low"
 	else:
 		return "Low"
-
+# HDL Only Section
 def output_HDL_data(result):
 	print("Your HDL status is: " + result)
 
@@ -45,5 +45,34 @@ def HDL_driver():
  
 	# Output Data
 	output_HDL_data(status)
+
+# LDL Only Section
+def input_LDL_data():
+	LDL_data = input("Please enter your LDL result: ")
+	return int(LDL_data)
+
+def analyze_LDL_data(result):
+	if result < 130:
+		return "Normal"
+	elif 130 <= result <= 159:
+		return "Borderline High"
+	elif 160 <= result <= 189:
+		return "High"
+	else:
+		return "Very High"
+
+def output_LDL_data(result):
+	print("Your LDL status is: " + result)
+
+def LDL_driver():
+	# Get Data
+	LDL_result = input_LDL_data()
+	
+	# Analyze Data
+	status = analyze_LDL_data(LDL_result)	
+ 
+	# Output Data
+	output_LDL_data(status)
+
 
 interface()
