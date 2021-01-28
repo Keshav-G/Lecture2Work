@@ -10,14 +10,22 @@ def input_HDL_data():
 	HDL_data = input("Please enter your HDL result: ")
 	return int(HDL_data)
 
+def analyze_HDL_data(result):
+	if result >= 60:
+		return "Normal"
+	elif result >= 40 and result < 60:
+		return "Borderline low"
+	else:
+		return "Low"
+
 def HDL_driver():
 	# Get Data
-	input_HDL_data()
+	HDL_result = input_HDL_data()
 	
 	# Analyze Data
-	analyze_HDL_data()	
+	status = analyze_HDL_data(HDL_result)	
  
 	# Output Data
-	output_HDL_data
+	output_HDL_data(status)
 
 interface()
