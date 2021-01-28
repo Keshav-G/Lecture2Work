@@ -75,4 +75,28 @@ def LDL_driver():
 	output_LDL_data(status)
 
 
+# Total Cholesterol Section
+def analyze_total_data(LDL, HDL):
+	total = LDL + HDL
+	if total < 200:
+		return "Normal"
+	elif 200 <= total <= 239:
+		return "Borderline High"
+	else:
+		return "High"
+
+def output_total_data(result):
+	print("Your total cholesterol level is: " + result)
+
+def Total_Cholesterol_Driver():
+	# Get Data
+	LDL_result = input_LDL_data()
+	HDL_result = input_HDL_data()
+	
+	# Analyze Data
+	status = analyze_total_data(LDL_result, HDL_result)	
+ 
+	# Output Data
+	output_total_data(status)
+
 interface()
