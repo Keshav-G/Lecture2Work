@@ -19,7 +19,7 @@ def interface():
 			print("Running Total Cholesterol Driver")
 			Total_Cholesterol_Driver()
 		else:
-			"Please enter 1, 2, 3, or 9"
+			print("Please enter 1, 2, 3, or 9")
 
 def input_HDL_data():
 	HDL_data = input("Please enter your HDL result: ")
