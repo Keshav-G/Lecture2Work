@@ -18,7 +18,7 @@ def analyze_HDL_data(result):
 	if result >= 60:
 		return "Normal"
 	elif 40 <= result < 60:
-		return "Borderline low"
+		return "Borderline Low"
 	else:
 		return "Low"
 
@@ -35,4 +35,5 @@ def HDL_driver():
 	# Output Data
 	output_HDL_data(status)
 
-interface()
+if __name__ == "__main__":
+	interface()	
