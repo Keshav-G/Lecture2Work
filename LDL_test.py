@@ -37,4 +37,5 @@ def LDL_driver():
 	# Output Data
 	output_LDL_data(status)
 
-interface()
+if __name__ == "__main__":
+	interface()
